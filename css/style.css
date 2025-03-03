@@ -12,8 +12,9 @@ body
  }
 .about-page
  {
-    background: url('https://www.shutterstock.com/image-vector/abstract-background-concept-linear-polygonal-600nw-1834549288.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+/*     background: url('https://www.shutterstock.com/image-vector/abstract-background-concept-linear-polygonal-600nw-1834549288.jpg') no-repeat center center/cover; */
+    background: url("https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg") no-repeat center center/cover;
+     background-attachment: fixed;
     background-size: cover;
     background-position: center;
  }
