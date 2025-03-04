@@ -6,9 +6,10 @@ body
     color: #fff;
     /* background: url('https://static.vecteezy.com/system/resources/previews/003/452/115/non_2x/wildlife-elk-in-forest-nature-landscape-illustration-free-vector.jpg') no-repeat center center/cover; */
     background: url("https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-06.jpg");
-    background-attachment: fixed;
+/*     background-attachment: fixed; */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
  }
 .about-page
  {
@@ -547,7 +548,17 @@ font-size: 40px;
 
 /* media query begins here */
 @media only screen and (min-width:300px)and (max-width:600px) {
-section
+body
+    {
+    body{
+    background: url("https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-06.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    }
+    
+    section
 {
 padding-top:100px;
 }
