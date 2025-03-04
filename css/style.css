@@ -4,16 +4,14 @@ body
     margin: 0;
     padding: 0;
     color: #fff;
-    /* background: url('https://static.vecteezy.com/system/resources/previews/003/452/115/non_2x/wildlife-elk-in-forest-nature-landscape-illustration-free-vector.jpg') no-repeat center center/cover; */
     background: url("https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-06.jpg");
-/*     background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
  }
 .about-page
  {
-/*     background: url('https://www.shutterstock.com/image-vector/abstract-background-concept-linear-polygonal-600nw-1834549288.jpg') no-repeat center center/cover; */
     background: url("https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg") no-repeat center center/cover;
      background-attachment: fixed;
     background-size: cover;
@@ -551,7 +549,6 @@ font-size: 40px;
 body
     {
     body{
-    background: url("https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-06.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
