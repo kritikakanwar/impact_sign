@@ -2,37 +2,49 @@ let currenDate=new Date();
 let currentYear=currenDate.getFullYear(); 
 document.getElementById("date").textContent=currentYear;
 
-document.addEventListener("DOMContentLoaded", function () {
-const menuToggle = document.querySelector("#menu-toggle");
-const navLinks = document.querySelector("#nav-menu");
+// /Hamburger function/
+   document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector("#menu-toggle");
+    const navMenu = document.querySelector("#nav-menu");
+    const navLinks = document.querySelectorAll("#nav-menu a"); // Select all links
 
-       menuToggle.addEventListener("click", function () {
-           navLinks.classList.toggle("active");
-       });
-   });
+    // Toggle menu on hamburger click
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active"); // Remove active class to hide menu
+        });
+    });
+});
+// hamburger function ends here
 
 document.addEventListener("DOMContentLoaded", function () {
        const homeLink = document.querySelector('nav ul li a[href="#home"]');
 
        function disableHomeLink() {
-           const homeSection = document.getElementById("home");
-           const rect = homeSection.getBoundingClientRect();
-
-           if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-               homeLink.classList.add("disabled");
-               homeLink.style.pointerEvents = "none"; // Disables clicking
-               homeLink.style.opacity = "0.5"; // Makes it look inactive
-           } else {
-               homeLink.classList.remove("disabled");
-               homeLink.style.pointerEvents = "auto";
-               homeLink.style.opacity = "1";
-           }
-       }
+        if (window.scrollY < 50) { // If near the top of the page
+            homeLink.classList.add("disabled");
+            homeLink.style.pointerEvents = "none"; // Disable clicking
+            homeLink.style.opacity = "0.5"; // Reduce opacity to show it's inactive
+        } else {
+            homeLink.classList.remove("disabled");
+            homeLink.style.pointerEvents = "auto"; // Enable clicking
+            homeLink.style.opacity = "1"; // Restore opacity
+        }
+    }
 
        window.addEventListener("scroll", disableHomeLink);
        disableHomeLink(); // Call on page load
    });
 
+
+
+
+//  image changing function  
    const images = [
            "image/Hp1.jpeg",
            "image/IndianOil.jpeg",
@@ -50,7 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
        // Set initial image on page load
        changeImage();
-       
+    // image changing function ends here
+
        function sendEmail(event) {
         event.preventDefault(); // Prevents actual form submission
     
